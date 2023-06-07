@@ -1,0 +1,5 @@
+RewriteEngine on
+#RewriteBase /en/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([\s\S]*)$ index.php?rt=$1 [L,B,QSA]
